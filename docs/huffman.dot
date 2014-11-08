@@ -1,0 +1,24 @@
+digraph huffman0 {
+ ratio = 1.0;
+ node [shape="point"]
+ edge [splines=none, ratio=0.5];
+ r -> 0 [label="0"]; 
+ 0 -> 00 [label="0"];
+ r -> 1 [label="1"];
+ 0-> 01 [label="1"];
+ 00 [label="0:00", shape="oval"];
+ 01 [label="1:01", shape="oval"];
+ 1 -> 10 [label="0"];
+ 10 [label="2:10", shape="oval"];
+ 1 -> 11 [label="1"];
+ 11 -> 110 [label="0"];
+ 110 [label="3:110", shape="oval"];
+ 11 -> 111 [label="1"];
+ 111 -> 1110 [label="0"];
+ 1110 [label="4:1110", shape="oval"];
+ 111 -> 1111 [label="1"];
+ 1111 -> 11110 [label="0"];
+ 11110 [label="5:11110", shape="oval"];
+ 1111 -> 11111 [label="1"];
+ 
+}
