@@ -33,7 +33,7 @@ Using **craw2tool** or **PyCraw2**:
 - 16 bits TIFF export for RGGB data
 - 16 bits TIFF export and import for YCbCr data (unofficial TIFF extension, I know)
 
-*not from **PyCraw2**, only **libcraw2** API 
+\*not from **PyCraw2**, only **libcraw2** API 
 
 In few words: educational, camera agnostic and lossless access to RGGB and YCbCr data
 
