@@ -49,8 +49,8 @@ As a summary, the PyCRaw2 goal is to allow RAW to RGB rendering using only Pytho
 
 ## What CRaw2 is not ##
 
-- a user friendly RAW to Jpeg rendering tool: use the excellent [DCraw](https://www.cybercom.net/~dcoffin/dcraw/) or Camera Raw ! CRaw2 is limited to Canon CR2 files.
-- a tool to display or hack TIFF tags: use the standard [ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/) ! But CRaw2 can be used 
+- a user friendly RAW to Jpeg rendering tool: use the excellent [DCraw](https://www.cybercom.net/~dcoffin/dcraw/) or Camera Raw. CRaw2 is limited to Canon CR2 files.
+- a tool to display or hack TIFF tags: use the standard [ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/). But CRaw2 can be used to analyze unknow TIFF tags.
 
 ##Bonus##
 

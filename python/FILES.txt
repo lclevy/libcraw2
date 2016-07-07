@@ -1,0 +1,6 @@
+scripts for python 2.7
+
+PyCanonRaw2.py          historical implementation of libcraw2 in python (obsolete)
+PyTiffParser.py         TIFF parser
+cr2_analysis.py         script using PyCanonRaw2 and PyTiffParser (obsolete)
+thumbnails              extract picture data from all IFDs. uses PyTiffParser
