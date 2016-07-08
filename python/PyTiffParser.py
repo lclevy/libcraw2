@@ -39,13 +39,17 @@ class PyTiffParser:
       self.file = f
       self.verbose = verbose    
       self.order, self.base, self.type = self.checkHeader( verbose )
-      print self.base
+      #print self.base
       
+   def listTagsCsv(self):
+     for t in self.tags:   
+       print t
+       
    def dumpTag( self, offset, len ):
       old_pos = self.file.tell()
       read = 0
       self.file.seek(offset+self.base)
-      print "0x%06x:" % (self.file.tell()),
+      #print "0x%06x:" % (self.file.tell()),
       line = min (16, len-read)
       d = self.file.read( line )
       read = read + line
@@ -86,11 +90,12 @@ class PyTiffParser:
       if self.verbose>0:
          print "\n Makernote entries = %d" % (n)
       for i in range(n):
+         offset = self.file.tell()
          tag = self.fGetShort( self.order )
          type = self.fGetShort( self.order )
          length = self.fGetLong( self.order )
          val = self.fGetLong( self.order )
-         self.tags[('maker', tag)] = (tag, type, length, val)
+         self.tags[('maker', tag)] = (tag, type, length, val, offset)
          if self.verbose>0:
             print "tag = 0x%x/%d, type = %d, length = 0x%x/%d, val = 0x%x/%d" % (tag,tag,type,length,length,val,val)
          """if (tag==0x4001) and self.verbose>1:
@@ -108,13 +113,14 @@ class PyTiffParser:
       if self.verbose>0:
          print "\n Exif entries = %d" % (n)
       for i in range(n):
+         offset = self.file.tell()
          tag = self.fGetShort( self.order )
          type = self.fGetShort( self.order )
          length = self.fGetLong( self.order )
          val = self.fGetLong( self.order )
          if self.verbose>0:
             print "tag = 0x%x/%d, type = %d, length = 0x%x/%d, val = 0x%x/%d" % (tag,tag,type,length,length,val,val)
-         self.tags[('exif', tag)] = (tag, type, length, val)
+         self.tags[('exif', tag)] = (tag, type, length, val, offset)
          if tag == TIFFTAG_VAL_MAKERNOTE:
             self.parseMakernote( val )
       self.file.seek(old_pos)
@@ -125,6 +131,7 @@ class PyTiffParser:
    def parseIFD( self, currentIfd ):
       n = self.fGetShort( self.order )
       for i in range(n):
+         offset = self.file.tell()
          tag = self.fGetShort( self.order )
          type = self.fGetShort( self.order )
          length = self.fGetLong( self.order )
@@ -132,7 +139,7 @@ class PyTiffParser:
          if self.verbose>0:
             print "tag = 0x%x/%d, type = %d, length = 0x%x/%d, val = 0x%x/%d" % (tag,tag,type,length,length,val,val)
          ifdName = 'ifd{0:x}'.format(currentIfd)
-         self.tags[(ifdName, tag)] = (tag, type, length, val)
+         self.tags[(ifdName, tag)] = (tag, type, length, val, offset)
          if tag == TIFFTAG_VAL_EXIF:
             self.parseExif( val )
       return self.fGetLong( self.order )

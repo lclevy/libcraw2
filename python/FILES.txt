@@ -4,3 +4,4 @@ PyCanonRaw2.py          historical implementation of libcraw2 in python (obsolet
 PyTiffParser.py         TIFF parser
 cr2_analysis.py         script using PyCanonRaw2 and PyTiffParser (obsolete)
 thumbnails              extract picture data from all IFDs. uses PyTiffParser
+unknown_tags.py         display length and presence of makernote tags
