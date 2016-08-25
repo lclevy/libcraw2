@@ -61,4 +61,5 @@ modelId, name, release, size, technology, processor
 0x80000328, 1DX Mark II,02/2016, FF,CMOS, Dual Digic6+
 0x80000350, 80D,02/2016, APS-C,Dual Pixel CMOS AF, Digic6
 0x03970000, G7 X Mark II,02/2016,1", BSI-CMOS, Digic7
-0x80000404, EOS Rebel T6 / 1300D / Kiss X80,03/2016, APS-C, CMOS, Digic4+
+0x80000404, EOS Rebel T6 / 1300D / Kiss X80, 03/2016, APS-C, CMOS, Digic4+
+0x80000349, 5D Mark IV, 08/2016, FF, Dual Pixel AF CMOS, Digic6+
