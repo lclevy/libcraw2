@@ -39,7 +39,7 @@ modelId, name, release, size, technology, processor
 0x03340000, SX50 HS,07/2012, 1/2.3",BSI-CMOS, Digic5
 0x80000302, 6D,09/2012, FF,CMOS, Digic5
 0x80000326, EOS Rebel T5i / 700D / Kiss X7i,03/2013, APS-C,CMOS, Digic5
-0x80000346, EOS Rebel SL1 / 100D / Kiss X7,03/2013, APS-C,Hybrid CMOS II, Digic5
+0x80000346, EOS Rebel SL1 / 100D / Kiss X7,03/2013, APS-C, Hybrid CMOS II, Digic5
 0x80000325, 70D,07/2013, APS-C,Dual Pixel CMOS AF, Digic5+
 0x03540000, G16,08/2013, 1/1.7",BSI-CMOS, Digic6
 0x03550000, S120,08/2013, 1/1.7",	BSI-CMOS, Digic6
@@ -60,6 +60,7 @@ modelId, name, release, size, technology, processor
 0x03840000, EOS M10,10/2015, APS-C,CMOS, Digic6
 0x80000328, 1DX Mark II,02/2016, FF,CMOS, Dual Digic6+
 0x80000350, 80D,02/2016, APS-C,Dual Pixel CMOS AF, Digic6
-0x03970000, G7 X Mark II,02/2016,1", BSI-CMOS, Digic7
+0x03970000, G7 X Mark II,02/2016, 1", BSI-CMOS, Digic7
 0x80000404, EOS Rebel T6 / 1300D / Kiss X80, 03/2016, APS-C, CMOS, Digic4+
 0x80000349, 5D Mark IV, 08/2016, FF, Dual Pixel AF CMOS, Digic6+
+0x03940000, EOS M5, 09/2016, APS-C, Dual Pixel AF CMOS, Digic 7
