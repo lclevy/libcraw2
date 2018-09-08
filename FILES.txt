@@ -41,7 +41,7 @@ utils.h
 PyCraw2.c     Python extension
 
 dataflow is
-1. opening a Canon Raw image and parse TIFF tags and image data: craw2.c and tiff.c
+1. opening a Canon Raw image, parse TIFF tags and image data: craw2.c and tiff.c
 2. decoding lossless jpeg into RGGB or YUV data: lljpeg.c and bits.c 
 3. creating an image (determining RGGB borders): rgb.c
 4. interpolate / demosaicing: rgb.c or yuv.c
