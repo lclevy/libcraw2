@@ -2,7 +2,9 @@
 
 #to generate dng_info.txt, based on DNG tags converted from CR2 images
 
-DNGCONV=/c/Program\ Files\ \(x86\)/Adobe/Adobe\ DNG\ Converter.exe
+DNGCONV=/c/Program\ Files/Adobe/Adobe\ DNG\ Converter/Adobe\ DNG\ Converter.exe
+BINPATH=vs2015/libcraw2/x64/Release
+#C:\Program Files\Adobe\Adobe DNG Converter
 DNGPIC=converted.dng
 
 for pic in `cat samples_list_rggb.txt`; do
@@ -18,8 +20,8 @@ for pic in `cat samples_list_rggb.txt`; do
     MATRIX=`exiftool.exe -s3 -colormatrix2 $DNGPIC`
     rm converted.dng
   fi
-  MODELNAME=`src/craw2tool.exe -g 0,272,a $pic`
-  MODELID=`src/craw2tool.exe -g m,16,v $pic`
+  MODELNAME=`$BINPATH//craw2tool.exe -g 0,272,a $pic`
+  MODELID=`$BINPATH//craw2tool.exe -g m,16,v $pic`
   MODELIDHEX=$(tohex $MODELID)
   echo "$MODELIDHEX"r", $MODELNAME, $BLACK, $WHITE, $MATRIX"
 done
@@ -36,8 +38,8 @@ for pic in `cat samples_list_yuv.txt`; do
     MATRIX=`exiftool.exe -s3 -colormatrix2 $DNGPIC`
     rm converted.dng
   fi
-  MODELNAME=`src/craw2tool.exe -g 0,272,a $pic`
-  MODELID=`src/craw2tool.exe -g m,16,v $pic`
+  MODELNAME=`$BINPATH//craw2tool.exe -g 0,272,a $pic`
+  MODELID=`$BINPATH//craw2tool.exe -g m,16,v $pic`
   MODELIDHEX=$(tohex $MODELID)
   echo "$MODELIDHEX"y", $MODELNAME, $BLACK, $WHITE, $MATRIX"
 done

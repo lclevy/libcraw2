@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcraw2", "libcraw2.vcxproj", "{C63081D2-A9D6-432F-92FE-E968C55B10D8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "craw2tool", "..\craw2tool\craw2tool.vcxproj", "{7A927457-FE68-4EC5-816D-C2C4559D2755}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C63081D2-A9D6-432F-92FE-E968C55B10D8} = {C63081D2-A9D6-432F-92FE-E968C55B10D8}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PyCraw2", "..\PyCraw2\PyCraw2.vcxproj", "{8E98A964-246C-4DC6-9A78-0221FF2FC75E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C63081D2-A9D6-432F-92FE-E968C55B10D8}.Debug|x64.ActiveCfg = Debug|x64
+		{C63081D2-A9D6-432F-92FE-E968C55B10D8}.Debug|x64.Build.0 = Debug|x64
+		{C63081D2-A9D6-432F-92FE-E968C55B10D8}.Debug|x86.ActiveCfg = Debug|Win32
+		{C63081D2-A9D6-432F-92FE-E968C55B10D8}.Debug|x86.Build.0 = Debug|Win32
+		{C63081D2-A9D6-432F-92FE-E968C55B10D8}.Release|x64.ActiveCfg = Release|x64
+		{C63081D2-A9D6-432F-92FE-E968C55B10D8}.Release|x64.Build.0 = Release|x64
+		{C63081D2-A9D6-432F-92FE-E968C55B10D8}.Release|x86.ActiveCfg = Release|Win32
+		{C63081D2-A9D6-432F-92FE-E968C55B10D8}.Release|x86.Build.0 = Release|Win32
+		{7A927457-FE68-4EC5-816D-C2C4559D2755}.Debug|x64.ActiveCfg = Debug|x64
+		{7A927457-FE68-4EC5-816D-C2C4559D2755}.Debug|x64.Build.0 = Debug|x64
+		{7A927457-FE68-4EC5-816D-C2C4559D2755}.Debug|x86.ActiveCfg = Debug|Win32
+		{7A927457-FE68-4EC5-816D-C2C4559D2755}.Debug|x86.Build.0 = Debug|Win32
+		{7A927457-FE68-4EC5-816D-C2C4559D2755}.Release|x64.ActiveCfg = Release|x64
+		{7A927457-FE68-4EC5-816D-C2C4559D2755}.Release|x64.Build.0 = Release|x64
+		{7A927457-FE68-4EC5-816D-C2C4559D2755}.Release|x86.ActiveCfg = Release|Win32
+		{7A927457-FE68-4EC5-816D-C2C4559D2755}.Release|x86.Build.0 = Release|Win32
+		{8E98A964-246C-4DC6-9A78-0221FF2FC75E}.Debug|x64.ActiveCfg = Debug|x64
+		{8E98A964-246C-4DC6-9A78-0221FF2FC75E}.Debug|x64.Build.0 = Debug|x64
+		{8E98A964-246C-4DC6-9A78-0221FF2FC75E}.Debug|x86.ActiveCfg = Debug|Win32
+		{8E98A964-246C-4DC6-9A78-0221FF2FC75E}.Debug|x86.Build.0 = Debug|Win32
+		{8E98A964-246C-4DC6-9A78-0221FF2FC75E}.Release|x64.ActiveCfg = Release|x64
+		{8E98A964-246C-4DC6-9A78-0221FF2FC75E}.Release|x64.Build.0 = Release|x64
+		{8E98A964-246C-4DC6-9A78-0221FF2FC75E}.Release|x86.ActiveCfg = Release|Win32
+		{8E98A964-246C-4DC6-9A78-0221FF2FC75E}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

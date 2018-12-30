@@ -1,0 +1,7 @@
+Thanks to these people whose work helped me:
+
+- Dave Coffin and his dcraw, of course. If your code has been more readable and with more comments, I would have not wrote libcraw2 ;-)
+- Phil Harvey and ExifTool
+- Calvin Hass for his tutorial on jpeg compression (http://www.impulseadventure.com/photo/jpeg-decoder.html)
+- Herbert Steierman from wildtramper.com for his lossless jpeg codec with comments
+

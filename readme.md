@@ -2,13 +2,13 @@
 
 ### A C and Python framework for Canon Raw v2 hacking ###
 
-version 0.7, dec 2014
+version 0.8, dec 2018
 
 ## Origin ##
 
-Because I was curious about how my holidays pictures are written to the memory card by my Canon camera, I started to write the [Canon Raw v2 specification](http://lclevy.free.fr/cr2/ "Understanding What is stored in a Canon RAW .CR2 file, How and Why"), based on others' work.
+Because I was curious about how my holidays pictures are written to the memory card by my Canon camera, I started to write the [Canon Raw v2 specification](http://lclevy.free.fr/cr2/ "Understanding What is stored in a Canon RAW .CR2 file, How and Why"), based on others' work (Phil Harvey and Dave Coffin).
 
-But is was not enough to 'open' this proprietary format, the next obvious step is to write code that can be used by others to play with CR2 file content. Python is easy to write and elegant to read, and C is efficient, let's use the best mix of them!  
+But is was not enough to 'open' this proprietary format, the next obvious step is to write code that can be used by others to play with CR2 file content. Python is easy to write and elegant to read, and C is efficient, let's use a mix of them!  
 
 ## Design ##
 
@@ -29,7 +29,7 @@ Using **craw2tool** or **PyCraw2**:
 - Unslicing and re-slicing*
 - RGGB and YCbCr data statistics
 - *Automatic* computation of RGGB top/left and bottom/right borders (before interpolation)
-- YCbCr data can be exported and imported in packed form (4:2:2 or 4:1:1 subsamping) or interpolated (4:4:4)
+- YCbCr data can be exported and imported in packed form (4:2:2 or 4:1:1 subsampling) or interpolated (4:4:4)
 - 16 bits TIFF export for RGGB data
 - 16 bits TIFF export and import for YCbCr data (unofficial TIFF extension, I know)
 
@@ -45,7 +45,11 @@ Using **PyCraw2**, we have additionallly:
 
 95% of camera specific values are *outside* of the code, in *dng_info.txt*. Only two libcraw2 functions are camera specific.
 
-As a summary, the PyCRaw2 goal is to allow RAW to RGB rendering using only Python and NumPy.
+
+
+**As a summary, the PyCRaw2 goal is to allow RAW to RGB rendering using only Python and NumPy.** 
+
+
 
 ## What CRaw2 is not ##
 
@@ -62,8 +66,8 @@ As a summary, the PyCRaw2 goal is to allow RAW to RGB rendering using only Pytho
 
 ## Availability ##
 
-- compiled for Windows 7 x64, Linux x64
-- for Python 2.7
+- compiled for Windows 10 x64. Tested under Linux x64, Ubuntu 18.04, Gcc 7.3
+- for Python 3.6
 - as code source
 
 CRaw2 is written by Laurent Clévy (@lorenzo2472) and released under GPLv2 license

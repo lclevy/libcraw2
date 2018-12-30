@@ -1,11 +1,9 @@
 
 FILES.txt                this file
 Makefile                 Makefile for Linux and MinGW
-setup.py                 to compile the craw2 extension under Linux and Windows SDK 7.0
 winsdk.bat               script to initialize Windows SDK 7.0 variables for python extension compilation
-vs2008/                  Solution and Project files to compile craw2 python extension for python 2.7 64bits with Visual Studio 2008
-vs2013/                  Solution and Project files to compile craw2tool and libcraw2 library for Windows 32 and 64 bits
-test_craw2.py            to demonstrate craw2 Python extension
+vs2015/                  Solution and Project files to compile craw2 python extension for python 3.6 64bits with Visual Studio 2015
+pycraw2_demo.py          to demonstrate craw2 Python extension
 samples_list_rggb.txt    auto test corpus
 samples_list_yuv.txt     auto test corpus
 cr2_database.sh          create CR2 database (raw dimensions, RGB borders, jpeg properties)
@@ -19,7 +17,6 @@ diff_file.c
 
 experimental:
 test_recompress.c        a tentative to recompress sensor data with better DHT tables. But I did not manage to encode DHT data in jpeg header
-
 
 
 in src/
@@ -39,11 +36,12 @@ tiff.h
 utils.c       utility functions
 utils.h
 PyCraw2.c     Python extension
+setup.py                 to compile the craw2 extension under Linux and Windows SDK 7.0
 
 dataflow is
 1. opening a Canon Raw image, parse TIFF tags and image data: craw2.c and tiff.c
 2. decoding lossless jpeg into RGGB or YUV data: lljpeg.c and bits.c 
 3. creating an image (determining RGGB borders): rgb.c
 4. interpolate / demosaicing: rgb.c or yuv.c
-5. 
+5. export to TIFF: tiff.c
 

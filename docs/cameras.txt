@@ -74,4 +74,4 @@ modelId, name, release, size, technology, processor
 0x80000417, EOS Kiss X9 / Rebel SL2 / 200D, 09/2017, APS-C, Dual Pixel AF CMOS, Digic7
 0x04180000, PowerShot G1 X Mark III, 10/2017, APS-C, Dual Pixel AF CMOS, Digic7 
 0x80000432, 2000D / EOS Rebel T7, 02/2018, APS-C, CMOS, Digic4+
-0x80000422, 4000D, 02/2018, APS-C, CMOS, Digic4+
+0x80000422, 4000D / EOS Rebel T100, 02/2018, APS-C, CMOS, Digic4+
